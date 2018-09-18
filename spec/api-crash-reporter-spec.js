@@ -93,7 +93,7 @@ describe('crashReporter module', () => {
                 env: {
                   ELECTRON_INTERNAL_CRASH_SERVICE: 1
                 },
-               detached: true
+                 detached: true
               })
               remote.process.crashServicePid = crashServiceProcess.pid
             }
@@ -437,7 +437,7 @@ describe('crashReporter module', () => {
 
 const waitForCrashReport = () => {
   return new Promise((resolve, reject) => {
-   let times = 0
+    let times = 0
     const checkForReport = () => {
       if (crashReporter.getLastCrashReport() != null) {
         resolve()
@@ -507,7 +507,7 @@ const startServer = ({callback, processType, done, preAssert, postAssert}) => {
     callback(port)
   })
 
- return function stopServer (done) {
+  return function stopServer (done) {
     for (const connection of activeConnections) {
       connection.destroy()
     }
